@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#container {
+  position: relative;
+  overflow: hidden;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #BE3144;
+  z-index: 20;
+}
+
+#navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#navbar ul li {
+  padding: 1rem 0;
+}
+
+#navbar ul li:hover {
+  background-color: #222224;
+}
+
+#navbar ul li a {
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+#welcome-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://i.postimg.cc/wvBqcGdf/altumcode-PNb-Dk-Q2-DDg-M-unsplash.jpg");
+  backgroun-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#welcome-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+}
+
+#welcome-section img {
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255, 0.2);
+  z-index: 10;
+}
+
+#welcome-section h1 {
+  color: white;
+  font-size: 2.5rem;
+  z-index: 10;
+}
+
+#welcome-section p {
+  color: #BE3144;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+#projects {
+  width: 100%;
+  background-color: #45567D;
+  padding: 0.5rem;
+}
+
+#projects h2 {
+  color: white;
+  font-size: 2rem;
+  border-bottom: 1px solid white;
+  text-align: center;
+  margin: 3rem 0;
+  padding-bottom: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 6rem;
+}
+
+.project-tile {
+  display: block;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.project-tile p span {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  color: #BE3144;
+}
+
+.project-tile:hover p > span {
+  opacity: 1;
+}
+
+.project-img {
+  width:  100%;
+  height: calc(100% - 6rem);
+  object-fit: cover;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #303841;
+  color: white;
+}
+
+#social {
+  width: 100%;
+  background-color: #303841;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-bottom: 2px solid #BE3144;
+  padding: 2rem 0;
+}
+
+#social h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#social p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#social div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#social a {
+  color: white;
+  text-decoration: none;
+  margin: 0.5rem;
+  text-transform: capitalize;
+  transition: transform 0.5s ease-out;
+  font-size: 1.5rem;
+}
+
+#social a:hover {
+  transform: translateY(10px);
+  transition: transform 0.5s ease-out;
+}
+
+footer {
+  background-color: #303841;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+@media screen and (min-width: 460px){
+  #navbar ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 720px){
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  #social div {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .projects-grid {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
